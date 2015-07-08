@@ -11,7 +11,7 @@ module.exports = {
             'src/js/**/*.hbs'
         ],
         less: {
-            default: 'src/less/default.less'
+            default: 'app/less/init.less'
         }
     },
 
