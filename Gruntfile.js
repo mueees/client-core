@@ -38,6 +38,16 @@ module.exports = function (grunt) {
                     }
                 ]
             },
+            html: {
+                files: [
+                    {
+                        src: ['app/index.html'],
+                        dest: '<%= build_dir %>/src/',
+                        expand: true,
+                        flatten: true
+                    }
+                ]
+            },
 
             //vendor
             vendor_js: {
@@ -94,7 +104,7 @@ module.exports = function (grunt) {
                         expand: true
                     }
                 ]
-            },
+            }
         },
         less: {
             dev: {
@@ -166,6 +176,7 @@ module.exports = function (grunt) {
 
         'copy:app_js',
         'copy:app_assets',
+        'copy:html',
 
         'less:dev',
 
@@ -191,3 +202,4 @@ module.exports = function (grunt) {
         grunt.task.run('watch');
     });
 };
+
