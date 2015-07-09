@@ -1,0 +1,34 @@
+.form-group {
+  &.mue-form-error {
+    .form-control {
+      border-color: @strawberry;
+    }
+  }
+
+  &.mue-form-warning {
+    .form-control {
+      border-color: @banana;
+    }
+  }
+
+  &.mue-form-success {
+    .form-control {
+      border-color: @cove;
+    }
+  }
+}
+
+.form-control {
+  outline: none;
+
+  border: 1px solid @coral;
+
+  &:hover {
+    border-color: @cutlass;
+  }
+
+  &:focus {
+    border-color: @lagoon;
+    box-shadow: none;
+  }
+}

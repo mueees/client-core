@@ -3,6 +3,7 @@ module.exports = {
     compile_dir: 'bin',
 
     app_files: {
+        index: 'app/index.html',
         js: [
             'src/js/**/*.js'
         ],
