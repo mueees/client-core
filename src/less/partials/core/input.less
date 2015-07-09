@@ -1,17 +1,17 @@
 .form-group {
-  &.mue-form-error {
+  &.mue-group-error {
     .form-control {
       border-color: @strawberry;
     }
   }
 
-  &.mue-form-warning {
+  &.mue-group-warning {
     .form-control {
       border-color: @banana;
     }
   }
 
-  &.mue-form-success {
+  &.mue-group-success {
     .form-control {
       border-color: @cove;
     }
@@ -22,6 +22,7 @@
   outline: none;
 
   border: 1px solid @coral;
+  color: @gunpowder;
 
   &:hover {
     border-color: @cutlass;
@@ -30,5 +31,18 @@
   &:focus {
     border-color: @lagoon;
     box-shadow: none;
+  }
+
+  &.mue-control-coral {
+    background: @coral;
+    color: @gunpowder;
+
+    &:hover {
+      background: @surf;
+    }
+
+    &:focus {
+      background: white;
+    }
   }
 }
