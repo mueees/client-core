@@ -1,4 +1,6 @@
 .form-group {
+  position: relative;
+
   &.mue-group-error {
     .form-control {
       border-color: @strawberry;
@@ -16,11 +18,19 @@
       border-color: @cove;
     }
   }
+
+
+
+  .mue-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: @gunpowder;
+  }
 }
 
 .form-control {
   outline: none;
-
   border: 1px solid @coral;
   color: @gunpowder;
 

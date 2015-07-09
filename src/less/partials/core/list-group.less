@@ -1,0 +1,61 @@
+.mue-list-group{
+  .mue-item-description {
+    color: @eight;
+    font-size: @second-font;
+  }
+
+  &.mue-list-group-icon {
+    .mue-item-icon{
+      float: left;
+      font-size: 30px;
+      margin-right: 15px;
+      margin-top: 22px;
+    }
+
+    .mue-list-content {
+      overflow: hidden;
+    }
+  }
+
+  &.mue-list-group-lagoon{
+    .list-group-item {
+      border-color: @lagoon;
+
+      &.active, &:hover, &:active {
+        background-color: @lagoon;
+        color: white;
+
+        .mue-item-description {
+          color: white;
+        }
+      }
+
+      &.active {
+        &:hover {
+          background-color: @lagoon;
+        }
+      }
+    }
+  }
+
+  &.mue-list-group-cove{
+    .list-group-item {
+      border-color: @cove;
+
+      &.active, &:hover, &:active {
+        background-color: @cove;
+        color: white;
+
+        .mue-item-description {
+          color: white;
+        }
+      }
+
+      &.active {
+        &:hover {
+          background-color: @cove;
+        }
+      }
+    }
+  }
+}

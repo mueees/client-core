@@ -81,29 +81,6 @@ module.exports = function (grunt) {
                         flatten: true
                     }
                 ]
-            },
-
-            // COMPILE
-            app_assets_compile: {
-                files: [
-                    {
-                        src: ['**'],
-                        dest: '<%= compile_dir %>/src/assets',
-                        cwd: 'src/assets',
-                        expand: true,
-                        flatten: false
-                    }
-                ]
-            },
-            vendor_js_compile: {
-                files: [
-                    {
-                        src: ['<%= compile_files.js %>'],
-                        dest: '<%= compile_dir %>',
-                        cwd: '.',
-                        expand: true
-                    }
-                ]
             }
         },
         less: {
@@ -114,14 +91,6 @@ module.exports = function (grunt) {
                 files: {
                     "<%= build_dir %>/src/assets/css/default-<%= pkg.name %>-<%= pkg.version %>.css": '<%= app_files.less.default %>'
                 }
-            },
-            compile: {
-                options: {
-                    paths: ["assets/css"]
-                },
-                files: {
-                    "<%= compile_dir %>/src/assets/css/default-<%= pkg.name %>-<%= pkg.version %>.css": '<%= app_files.less.default %>'
-                }
             }
         },
         clean: {
@@ -130,9 +99,6 @@ module.exports = function (grunt) {
             ],
             assets_build: [
                 '<%= build_dir %>/assets'
-            ],
-            compile: [
-                '<%= compile_dir %>'
             ]
         },
         watch: {
@@ -187,18 +153,6 @@ module.exports = function (grunt) {
         'copy:vendor_css',
         'copy:vendor_js',
         'copy:vendor_fonts'
-    ]);
-
-    grunt.registerTask('compile', [
-        'clean:compile',
-
-        'copy:app_assets_compile',
-
-        'copy:vendor_js_compile',
-
-        'requirejs:account',
-
-        'less:compile'
     ]);
 
     grunt.registerTask('debug', 'Main task for development', function () {
