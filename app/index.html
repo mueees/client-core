@@ -37,6 +37,13 @@
 
 <br/>
 
+<div class="mue-info">
+    <i class="fa fa-question-circle mue-icon"></i>
+    <div class="panel mue-panel mue-info-description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-md-3">
@@ -47,6 +54,7 @@
                     </div>
                     <div class="mue-list-content">
                         <h4 class="list-group-item-heading">New</h4>
+
                         <p class="mue-item-description">
                             Create new application.
                         </p>
@@ -58,6 +66,7 @@
                     </div>
                     <div class="mue-list-content">
                         <h4 class="list-group-item-heading">Calendar</h4>
+
                         <p class="mue-item-description">
                             Calendar and task tracker app. And other long olong description.
                         </p>
@@ -69,6 +78,7 @@
                     </div>
                     <div class="mue-list-content">
                         <h4 class="list-group-item-heading">Rss</h4>
+
                         <p class="mue-item-description">
                             Rss for news and fun. Subscribe and follow us.
                         </p>
@@ -77,13 +87,98 @@
             </div>
         </div>
         <div class="col-md-9">
-            <div class="panel mue-panel"></div>
+            <div class="panel mue-panel">
+                <div class="panel-heading">Panel heading without title</div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <div class="panel mue-panel mue-form-panel">
+                <form>
+                    <div class="form-panel-title">
+                        New application
+                    </div>
+                    <div class="form-panel-description">
+                        Create new application, get access token from user and provide best expirience.
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="form-control-icon">
+                            <i class="fa fa-user mue-icon"></i>
+                            <input id="name" type="email" name="email" class="form-control" placeholder="Email">
+                        </div>
+                        <p class="help-block">User see that name, when approve your request.</p>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <button class="btn btn-lagoon btn-xs pull-right">generate new key</button>
+                                    <div class="form-control-icon">
+                                        <i class="fa fa-user mue-icon"></i>
+                                        <input id="name" type="email" name="email" class="form-control"
+                                               placeholder="Email">
+                                    </div>
+                                    <p class="help-block">User see that name, when approve your request.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+
+                                    <div class="form-control-icon">
+                                        <i class="fa fa-user mue-icon"></i>
+                                        <input id="name" type="email" name="email" class="form-control"
+                                               placeholder="Email">
+                                    </div>
+                                    <p class="help-block">User see that name, when approve your request.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <button type="submit" class="btn btn-banana btn-action btn-block"><i class="fa fa-plus mue-icon"></i>Create new app</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-banana btn-action">Create new app</button>
+                        <button type="submit" class="btn btn-neutral">Cancel</button>
+                    </div>
+                    <div class="form-group mue-align-right">
+                        <button type="submit" class="btn btn-banana btn-action">Create new app</button>
+                        <button type="submit" class="btn btn-neutral">Cancel</button>
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="pull-left">
+                            <button type="submit" class="btn btn-neutral">Reset</button>
+                        </div>
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-banana btn-action">Create new app</button>
+                            <button type="submit" class="btn btn-neutral">Cancel</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-banana btn-action btn-block">Create new app
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-banana btn-action btn-block">Create new app
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="container">
-    <div class="row">
+    <div class="row"    >
         <div class="col-md-3">
             <div class="panel mue-panel mue-sign">
                 <div class="panel-body">
@@ -94,12 +189,17 @@
 
                     <div class="form-group sign-control">
                         <div class="form-group">
-                            <i class="fa fa-user mue-icon"></i>
-                            <input type="email" name="email" class="form-control mue-control-coral" placeholder="Email">
+                            <div class="form-control-icon">
+                                <i class="fa fa-user mue-icon"></i>
+                                <input type="email" name="email" class="form-control mue-control-coral" placeholder="Email">
+                            </div>
                         </div>
                         <div class="form-group">
-                            <i class="fa fa-lock mue-icon"></i>
-                            <input type="password" name="password" class="form-control mue-control-coral" placeholder="Password">
+                            <div class="form-control-icon">
+                                <i class="fa fa-lock mue-icon"></i>
+                                <input type="password" name="password" class="form-control mue-control-coral"
+                                       placeholder="Password">
+                            </div>
                         </div>
                     </div>
 
@@ -113,12 +213,14 @@
             <div class="list-group mue-list-group mue-list-group-lagoon ">
                 <a href="#" class="list-group-item list-group-item-lagoon active">
                     <h4 class="list-group-item-heading">Calendar</h4>
+
                     <p class="mue-item-description">
                         Calendar and task tracker app. And other long olong description.
                     </p>
                 </a>
                 <a href="#" class="list-group-item list-group-item-lagoon">
                     <h4 class="list-group-item-heading">Rss</h4>
+
                     <p class="mue-item-description">
                         Rss for news and fun. Subscribe and follow us.
                     </p>
@@ -133,6 +235,7 @@
                     </div>
                     <div class="mue-list-content">
                         <h4 class="list-group-item-heading">Calendar</h4>
+
                         <p class="mue-item-description">
                             Calendar and task tracker app. And other long olong description.
                         </p>
@@ -144,6 +247,7 @@
                     </div>
                     <div class="mue-list-content">
                         <h4 class="list-group-item-heading">Rss</h4>
+
                         <p class="mue-item-description">
                             Rss for news and fun. Subscribe and follow us.
                         </p>
@@ -154,6 +258,8 @@
     </div>
 </div>
 
+<button class="btn btn-clear">General</button>
+<button class="btn btn-neutral">General</button>
 <button class="btn btn-lagoon">General</button>
 <button class="btn btn-lagoon btn-action btn-lg">General</button>
 <button class="btn btn-strawberry">General</button>
@@ -162,7 +268,6 @@
 <button class="btn btn-banana btn-action btn-xs">General</button>
 <button class="btn btn-bruise ">General</button>
 <button class="btn btn-bruise btn-action">General</button>
-
 
 
 <ul class="nav nav-pills nav-stacked mue-pills">

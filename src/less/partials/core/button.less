@@ -12,7 +12,7 @@
 
   &.btn-lg {
     &.btn-action {
-      &:hover{
+      &:hover {
         padding: 11px 16px 9px;
       }
 
@@ -24,7 +24,7 @@
 
   &.btn-sm {
     &.btn-action {
-      &:hover{
+      &:hover {
         padding: 6px 10px 4px;
       }
 
@@ -36,7 +36,7 @@
 
   &.btn-xs {
     &.btn-action {
-      &:hover{
+      &:hover {
         padding: 2px 5px 0;
       }
 
@@ -48,6 +48,10 @@
 
   &:focus {
     outline: none;
+  }
+
+  .mue-icon {
+    padding: 0 10px 0 0;
   }
 }
 
@@ -171,7 +175,7 @@
   background: @bruise;
   border-color: @bruise;
 
- &:focus {
+  &:focus {
     color: white;
     background: @bruise;
     border-color: @bruise;
@@ -201,5 +205,56 @@
       box-shadow: 0 0 0 @bruise-dark;
       outline: none;
     }
+  }
+}
+
+.btn-neutral {
+  color: @gunpowder;
+  background: @coral;
+  border-color: @coral;
+
+  &:focus {
+    color: @gunpowder;
+    background: @coral;
+    border-color: @coral;
+  }
+
+  &:hover {
+    color: @gunpowder;
+    background: @surf;
+    border-color: @surf;
+  }
+
+  &:active {
+    color: white;
+    background: @cutlass;
+    border-color: @cutlass;
+    outline: none;
+  }
+}
+
+.btn-clear {
+  color: @gunpowder;
+  background: transparent;
+  border-color: transparent;
+
+  &:focus {
+    color: @gunpowder;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  &:hover {
+    color: @gunpowder;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  &:active {
+    color: white;
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
   }
 }
