@@ -1,5 +1,34 @@
-.mue-panel{
+.mue-panel {
   border-color: @coral;
   border-width: 2px;
   min-height: 30px;
+
+  &.mue-panel-banana {
+    .panel-heading{
+      background: @banana;
+      color: white;
+    }
+  }
+
+  .panel-heading {
+    position: relative;
+    text-align: center;
+
+    .btn-panel-heading-action {
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      color: @flag;
+    }
+  }
+
+  &.mue-panel-wide {
+    .btn-panel-heading-action {
+      color: white;
+    }
+
+    .panel-body {
+      padding: 0;
+    }
+  }
 }
