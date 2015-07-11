@@ -62,6 +62,39 @@
     }
   }
 
+  &.mue-list-group-dark {
+    background: @gunpowder;
+    color: @coral;
+
+    .btn {
+      color: @coral;
+
+      &:hover {
+        color: @surf;
+      }
+    }
+
+    .list-group-item {
+      background: @gunpowder;
+      border-color: @gunpowder;
+
+      &.active, &:hover, &:active {
+        background-color: @flag;
+        color: @banana;
+
+        .mue-item-description {
+          color: @coral;
+        }
+      }
+
+      &.active {
+        &:hover {
+          background-color: @flag;
+        }
+      }
+    }
+  }
+
   &.mue-list-group-flat {
     .list-group-item {
       border-right: 0;
