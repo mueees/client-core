@@ -15,24 +15,13 @@ module.exports = function (grunt) {
     var taskConfig = {
         pkg: grunt.file.readJSON("package.json"),
         copy: {
-            // DEVELOPMENT
-            app_assets: {
-                files: [
-                    {
-                        src: ['**'],
-                        dest: '<%= build_dir %>/src/assets',
-                        cwd: 'src/assets',
-                        expand: true,
-                        flatten: false
-                    }
-                ]
-            },
+            // Application files
             app_js: {
                 files: [
                     {
                         src: ['**'],
                         dest: '<%= build_dir %>/src/js',
-                        cwd: 'src/js',
+                        cwd: 'app/js',
                         expand: true,
                         flatten: false
                     }
@@ -49,12 +38,25 @@ module.exports = function (grunt) {
                 ]
             },
 
+            // Src files
+            src_js: {
+                files: [
+                    {
+                        src: ['**'],
+                        dest: '<%= build_dir %>/src/js/src',
+                        cwd: 'src/js',
+                        expand: true,
+                        flatten: false
+                    }
+                ]
+            },
+
             //vendor
             vendor_js: {
                 files: [
                     {
                         src: ['<%= vendor_files.js %>'],
-                        dest: '<%= build_dir %>',
+                        dest: '<%= build_dir %>/src',
                         cwd: '.',
                         expand: true
                     }
@@ -145,7 +147,7 @@ module.exports = function (grunt) {
         'clean:build',
 
         'copy:app_js',
-        'copy:app_assets',
+        'copy:src_js',
         'copy:html',
 
         'less:dev',
@@ -160,4 +162,3 @@ module.exports = function (grunt) {
         grunt.task.run('watch');
     });
 };
-

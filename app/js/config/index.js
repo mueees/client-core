@@ -31,7 +31,6 @@ requirejs.config({
         disableI18n: true
     },
 
-
     shim: {
         jquery: {
             exports: "jQuery"
