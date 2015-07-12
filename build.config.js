@@ -31,6 +31,7 @@ module.exports = {
             'vendor/requirejs/require.js',
             'vendor/requirejs/text.js',
             'vendor/jquery/dist/jquery.js',
+            'vendor/jquery-mockjax-2.0.0-beta/mockajax.js',
             'vendor/underscore-1.8.3/underscore.js',
             'vendor/bootstrap/dist/js/bootstrap.js',
             'vendor/handlebars-0.11.2/handlebars.js',
