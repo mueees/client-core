@@ -1,6 +1,5 @@
 define([
-    'jquery',
-    'clientCore/notify/notify.service'
+    'jquery'
 ], function ($) {
     function addPrefilter(preFilter) {
         $.ajaxPrefilter(preFilter);
