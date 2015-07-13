@@ -4,6 +4,7 @@ module.exports = {
 
     app_files: {
         index: 'app/index.html',
+        js_html: 'app/js.html',
         js: [
             'app/js/**/*.js'
         ],

@@ -2,6 +2,7 @@ requirejs.config({
     baseUrl: 'js/',
     paths: {
         app: 'apps/base',
+        components: 'pages/components',
 
         clientCore: '../js/src',
 

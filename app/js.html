@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Js kit</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/default-client-0.0.1.css"/>
+</head>
+<body>
+<script src="vendor/requirejs/require.js"></script>
+<script>
+    require(['js/config/index'], function () {
+        require(['pages/home'], function () {
+        });
+    });
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 menu-container">
+            <h4>Menu View</h4>
+        </div>
+        <div class="col-md-4 list-group-container">
+            <h4>List group</h4>
+        </div>
+        <div class="col-md-4">3</div>
+    </div>
+</div>
+</body>
+</html>

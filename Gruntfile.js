@@ -30,7 +30,10 @@ module.exports = function (grunt) {
             html: {
                 files: [
                     {
-                        src: ['<%= app_files.index %>'],
+                        src: [
+                            '<%= app_files.index %>',
+                            '<%= app_files.js_html %>'
+                        ],
                         dest: '<%= build_dir %>/src/',
                         expand: true,
                         flatten: true
@@ -105,7 +108,10 @@ module.exports = function (grunt) {
         },
         watch: {
             index: {
-                files: ['<%= app_files.index %>'],
+                files: [
+                    '<%= app_files.index %>',
+                    '<%= app_files.js_html %>'
+                ],
                 tasks: ['copy:html']
             },
             app_js: {
@@ -114,6 +120,13 @@ module.exports = function (grunt) {
                     '<%= app_files.templates %>'
                 ],
                 tasks: ['copy:app_js']
+            },
+            src_js: {
+                files: [
+                    '<%= src_files.js %>',
+                    '<%= src_files.templates %>'
+                ],
+                tasks: ['copy:src_js']
             },
             assets: {
                 files: ['src/assets/**'],
