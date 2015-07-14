@@ -4,7 +4,8 @@ require([
 ], function (Backbone, ListGroupView) {
     var menu = new ListGroupView({
         model: new Backbone.Model({
-            active: 0,
+            activeItem: 1,
+            isFlat: true,
             items: [
                 {
                     name: 'Home',
