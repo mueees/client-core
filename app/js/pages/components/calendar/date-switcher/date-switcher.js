@@ -13,7 +13,7 @@ define([
         dateSwitcher = new DateSwitcher({
             model: dateModel,
             region: new Marionette.Region({
-                el: '.date-switcher'
+                el: '.date-switcher-container'
             })
         });
 
