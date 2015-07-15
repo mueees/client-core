@@ -20,6 +20,7 @@ requirejs.config({
         bootstrap: '../vendor/bootstrap/dist/js/bootstrap',
         'hbs': '../vendor/handlebars-0.11.2/handlebars',
         mockajax: '../vendor/jquery-mockjax-2.0.0-beta/mockajax',
+        moment: '../vendor/moment-2.10.3/moment',
 
         underscore: "../vendor/underscore-1.8.3/underscore",
         jquery: "../vendor/jquery/dist/jquery",

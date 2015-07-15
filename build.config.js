@@ -36,6 +36,7 @@ module.exports = {
             'vendor/underscore-1.8.3/underscore.js',
             'vendor/bootstrap/dist/js/bootstrap.js',
             'vendor/handlebars-0.11.2/handlebars.js',
+            'vendor/moment-2.10.3/moment.js',
             'vendor/marionette/marionette.js',
             'vendor/backbone/backbone.js',
             'vendor/backbone/backbone_clear.js',
