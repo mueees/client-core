@@ -32,7 +32,8 @@ module.exports = function (grunt) {
                     {
                         src: [
                             '<%= app_files.index %>',
-                            '<%= app_files.js_html %>'
+                            '<%= app_files.js_html %>',
+                            '<%= app_files.dev_html %>'
                         ],
                         dest: '<%= build_dir %>/src/',
                         expand: true,
@@ -110,7 +111,8 @@ module.exports = function (grunt) {
             index: {
                 files: [
                     '<%= app_files.index %>',
-                    '<%= app_files.js_html %>'
+                    '<%= app_files.js_html %>',
+                    '<%= app_files.dev_html %>'
                 ],
                 tasks: ['copy:html']
             },

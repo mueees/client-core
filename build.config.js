@@ -5,6 +5,7 @@ module.exports = {
     app_files: {
         index: 'app/index.html',
         js_html: 'app/js.html',
+        dev_html: 'app/dev.html',
         js: [
             'app/js/**/*.js'
         ],
@@ -47,9 +48,14 @@ module.exports = {
             'vendor/backbone/backbone.stickit.js',
             'vendor/backbone/backbone.syphon.js',
             'vendor/backbone/backbone.validation.js',
-            'vendor/backbone/backbone.wreqr.js'
+            'vendor/backbone/backbone.wreqr.js',
+            'vendor/jquery-timepicker/jquery-timepicker.js',
+            'vendor/bootstrap-datepicker/bootstrap-datepicker.js'
         ],
-        css: [],
+        css: [
+            'vendor/bootstrap-datepicker/bootstrap-datepicker.css',
+            'vendor/jquery-timepicker/jquery-timepicker.css'
+        ],
         fonts: [],
         assets: []
     },
