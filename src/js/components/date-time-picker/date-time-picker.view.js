@@ -16,35 +16,39 @@ define([
             end: '[data-el="end"]'
         },
 
+        initialize: function (options) {
+            options = options || {};
+            options.settings = options.settings || {};
+        },
+
         onShow: function () {
-            var me = this;
+            var me = this,
+                defaultTimePickerSettings = {
+                    autoclose: true,
+                    forceRoundTime: true,
+                    step: 60
+                },
+                defaultDatePickerSettings = {
+                    autoclose: true,
+                    todayHighlight: true,
+                    format: 'DD, dd MM yyyy'
+                },
+                timePickerSettings = _.assign(_.clone(defaultTimePickerSettings), this.options.settings.timepicker),
+                datePickerSettings = _.assign(_.clone(defaultDatePickerSettings), this.options.settings.datepicker);
 
-            this.date = this.ui.date.datepicker({
-                autoclose: true,
-                todayHighlight: true,
-                format: 'DD, dd MM yyyy'
-            });
-
+            this.date = this.ui.date.datepicker(datePickerSettings);
             this.date.on('changeDate', function (options) {
                 me.model.set('date', options.date);
             });
 
-            this.start = this.ui.start.timepicker({
-                autoclose: true,
-                forceRoundTime: true,
-                step: 60
-            });
+            this.start = this.ui.start.timepicker(timePickerSettings);
             this.start.on('changeTime', function (options) {
                 var currentTime = me.start.timepicker('getTime');
 
                 me.model.set('start', currentTime);
             });
 
-            this.end = this.ui.end.timepicker({
-                autoclose: true,
-                forceRoundTime: true,
-                step: 60
-            });
+            this.end = this.ui.end.timepicker(timePickerSettings);
             this.end.on('changeTime', function () {
                 var currentTime = me.end.timepicker('getTime');
 
@@ -52,7 +56,6 @@ define([
             });
 
             this.date.datepicker('setDate', me.model.get('date'));
-
             this.start.timepicker('setTime', me.model.get('start'));
             this.end.timepicker('setTime', me.model.get('end'));
         }

@@ -1,25 +1,28 @@
 define([
     'marionette',
     'moment',
-    './date-time-picker.view'
+    './time-picker.view'
 ], function (Marionette, moment, View) {
     return Marionette.Controller.extend({
         initialize: function (options) {
-            var me = this,
-                now = new Date();
+            var me = this;
 
             this.options = options || {};
-
+            this.options.settings = this.options.settings || {};
             this.region = options.region;
+
             this.model = new Backbone.Model({
-                date: now,
-                start: now,
-                end: moment(now).add(1, 'hours').toDate()
+                time: new Date(),
+                label: this.options.settings.label || 'Choose time'
             });
 
             this.listenTo(this.model, 'change', function(){
-                me.trigger('date:change', me.model.toJSON());
+                me.trigger('mue:change:time', me.model.get('time'));
             });
+        },
+
+        getTime: function () {
+            return this.model.get('time');
         },
 
         show: function () {
