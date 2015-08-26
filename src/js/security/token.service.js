@@ -1,7 +1,7 @@
 define([
     'storage'
 ], function (storage) {
-    var tokenName = 'client_token';
+    var tokenName = 'authentication';
 
     function create(data){
         storage.set(tokenName, data);
@@ -15,9 +15,14 @@ define([
         return Boolean(storage.get(tokenName));
     }
 
+    function getToken(){
+        return storage.get(tokenName);
+    }
+
     return {
         create: create,
         destroy: destroy,
+        getToken: getToken,
         isAlive: isAlive
     }
 });

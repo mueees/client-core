@@ -46,7 +46,7 @@ define([], function () {
 
             this.window = window.open(provideServer + applicationOauthKey);
 
-            w.addEventListener("message", function (e) {
+            window.addEventListener("message", function (e) {
                 me.receiveMessage(e);
             }, false);
 
